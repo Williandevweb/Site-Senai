@@ -400,3 +400,15 @@ body {
 .fa-whatsapp {
   margin-top: 16px;
 }
+
+span {
+  font-size: 60px;
+
+
+}
+.box {
+  background-color: blanchedalmond;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
