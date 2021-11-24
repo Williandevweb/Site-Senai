@@ -1,0 +1,159 @@
+  <!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Mania | Contato</title>
+  <link rel="shortcut icon" href="../css/pages-css/images/logo-acc.jpeg" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../css/pages-css/contato.min.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/style2.css">
+</head>
+<body>
+<header id="header" class="page-contato">
+  <div class="container">
+    <div class="row">
+      <div class="col col-desktop-3 col-6">
+        <a href="index.html">
+          
+          <a class="whatsapp-link" href="https://api.whatsapp.com/send?phone=5516992417053&text=Ol%C3%A1%20tudo%20bem%3F" target="_blank">
+            <i class="fa fa-whatsapp"></i>
+            </a>
+        </a>
+      </div>
+      <div class="col col-desktop-9 col-6">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="quem-somos.html">Quem Somos</a></li>
+            <li><a href="Comprar.html">Comprar</a></li>
+            <li><a href="contato.html"class="active">Contato</a></li>
+            <li><a href="produto.html">Baixar APP</a></li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-desktop-12 title">
+        <h1>Será um prazer atende-lo!</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="middle">
+    <div class="mouse">
+
+    </div>
+</div>
+
+</header>
+<main>
+  <section class="section section-center">
+    <h2>Contato</h2>
+    <p class="subtitle">
+      Envie sua mensagem ou duvidas por Email que entraremos em contato o mais rapido possivel para poder atender e solucionar o seu problema.
+      
+    </p>
+
+    <div class="container">
+      <!-- https://github.com/dwyl/html-form-send-email-via-google-script-without-server -->
+      <form action="https://script.google.com/macros/s/AKfycbzwr5wrIL9yQUw3Lh83wjqIw05peunLi-iUHiNVMgQ9WgXbj3AM/exec" class="row" method="post">
+        <div class="col col-desktop-6 col-6">
+          <div class="input-control">
+            <input id="nome" name="nome" type="text" required placeholder="Nome...">
+            <label for="nome">Nome*</label>
+          </div>
+          <div class="input-control">
+            <input id="email" name="email" type="email" required placeholder="Email...">
+            <label for="email">Email*</label>
+          </div>
+          <div class="input-control">
+            <input id="telefone" name="telefone" type="number" placeholder="Telefone...">
+            <label for="telefone">Telefone</label>
+          </div>
+        </div>
+        <div class="col col-desktop-6 col-6">
+          <div class="input-control">
+            <textarea id="mensagem" name="mensagem" id="" cols="30" rows="10" placeholder="Mensagem..."></textarea>
+            <label for="mensagem">Mensagem*</label>
+          </div>
+        </div>
+        <div class="col col-desktop-12 col-6">
+          <input type="submit" value="Enviar" class="btn orange">
+        </div>
+      </form>
+    </div>
+
+  </section>
+</main>
+<footer id="footer">
+  <div class="container">
+      <div class="row">
+          <div class="col col-offset-desktop-1 col-desktop-3">
+              <h1 style="color: rgb(226, 201, 6);">Game Mania</h1>
+              <p>Somos a maior loja virtual do estado de São Paulo, aqui voçe encontra os mais diversos produtos relacionados
+                        a tecnologia, jogos, gamers, cadeiras e muito mais!
+                        Nossos produtos são de qualidade porque trabalhamos com as melhores marcas do mercado.
+
+              </p>
+          </div>
+          <div class="col col-offset-desktop-1 col-desktop-2 col-2">
+              <h3>Menu</h3>
+              <nav>
+                  <ul>
+                      <li><a href="" class="">Home</a></li>
+                      <li><a href="quem-somos.html">Quem somos</a></li>
+                      <li><a href="equipe.html">Equipe</a></li>
+                      <li><a href="contato.html">Contato</a></li>
+                      <li><a href="produto.html">Baixar App</a></li>
+                  </ul>
+              </nav>
+          </div>
+          <div class="col col-desktop-3 social col-4">
+              <a href="https://pt-br.facebook.com/pg/pcfpecas/photos/?ref=page_internal" target="_blank"><img src="../css/pages-css/imagem/social-facebook.ico" alt=""></a>
+              <a href="https://www.instagram.com/pcftratores/" target="_blank"><img src="../css/pages-css/imagem/social-twitter.ico" alt=""></a>
+              <!--<a href=""><img src="../css/pages-css/images/social-youtube.png" alt=""></a>-->
+          </div>
+      </div>
+  </div>
+</footer>
+
+
+<script src="js/anim.js"></script>
+<script src="js/imagem.js"></script>
+</body>
+
+</html>
+
+<div id="copyright">
+  &copy; Copyright - 2021 - Todos os direitos reservados
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+  $('form').submit(function (event) {
+    event.preventDefault();
+    $('form input[type="submit"]').val('Aguarde...')
+        .attr('disabled', true);
+    $.ajax({
+      type: $('form').attr('method'),
+      url: $('form').attr('action'),
+      data: $('form').serialize(),
+      success: function () {
+        alert('Email enviado com sucesso');
+        $('form').trigger('reset');
+
+        $('form input[type="submit"]').val('Enviar')
+        .attr('disabled', false);
+      }
+    });
+  });
+</script>
+
+
+</body>
+</html>

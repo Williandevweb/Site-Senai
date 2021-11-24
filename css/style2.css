@@ -1,0 +1,44 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+.middle {
+   position: absolute;
+   top: 90%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+.mouse {
+    width: 40px;
+    height: 100px;
+    border: 4px solid #333;
+    border-radius: 60px;
+}
+
+.mouse::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 20px;
+    background: rgb(249, 250, 249);
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: mouse 2s infinite;
+}
+
+@keyframes mouse {
+    from {
+        opacity: 1;
+        top: 20px;
+}
+
+to{
+    opacity: 0;
+    top: 80px;
+}
+}
